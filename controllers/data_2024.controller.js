@@ -17,7 +17,7 @@ exports.getAll = async (req, res) => {
             limit,
             total,
             totalPages: Math.ceil(total / limit),
-            data: data
+            2024: data
         });
     } catch (err) {
         res.status(500).json({ error: err.message });
