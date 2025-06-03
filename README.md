@@ -1,6 +1,6 @@
-# Project Title
+# Graduation Grade Tracker
 
-Brief description of what the project is about and what it does.
+Personal Project - Back-end
 
 ## Table of Contents
 
