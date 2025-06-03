@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { connectDB } = require('./models/db');
-const data2024Routes = require('./routes/data_2024.routes');
+const dataRoutes = require('./routes/data.routes');
 
 const app = express();
 const port = 3000;
@@ -24,7 +24,7 @@ app.use(cors());
 //   credentials: true
 // }));
 
-app.use('/api/2024', data2024Routes); // CRUD endpoints
+app.use('/api/data', dataRoutes); // CRUD endpoints
 
 connectDB().then(() => {
     app.listen(port, () => {
