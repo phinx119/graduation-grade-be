@@ -13,11 +13,11 @@ exports.getAll = async (req, res) => {
         const data = await collection.find().skip(skip).limit(limit).toArray();
 
         res.status(200).json({
-            data: data,
             page,
             limit,
             total,
-            totalPages: Math.ceil(total / limit)
+            totalPages: Math.ceil(total / limit),
+            data: data
         });
     } catch (err) {
         res.status(500).json({ error: err.message });
